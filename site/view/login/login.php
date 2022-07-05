@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-
-    <!-- Basic Page Needs
-    ================================================== -->
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
     <title>Aviato | E-commerce template</title>
 
     <!-- Mobile Specific Metas
@@ -34,88 +31,83 @@
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="public/css/style.css">
-
-  </head>
-
-  <body id="body">
-
+</head>
+<body>
     <section class="signin-page account">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <div class="block text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="block text-center">
 
-              <a class="logo" href="index.php">
-                <img src="../upload/Logo LV Web.jpg" alt="" style="width: 102px; height: 30px;">
-              </a>
-              
-              <h2 class="text-center">Chào Mừng Đã Quay Trở Lại</h2>
+                        <a class="logo" href="index.php">
+                            <img src="../upload/Logo LV Web.jpg" alt="" style="width: 102px; height: 30px;">
+                        </a>
+                        
+                        <h2 class="text-center">Chào Mừng Đã Quay Trở Lại</h2>
+        
+                        <form class="text-left clearfix" action="index.php?c=login&a=form" method="POST">
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control"  placeholder="Email" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" placeholder="Mật Khẩu" required>
+                            </div>
+        
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-main text-center" >Đăng Nhập</button>
+                            </div>
+                        </form>
+        
+                        <p class="mt-20">Bạn là người mới ?<a href="index.php?c=account&a=signUp"> <b>Hãy Tạo Tài Khoản Mới</b></a></p>
+        
+                        <a class="mt-20" href="index.php?c=account&a=forgetPassword">Quên mật khẩu</a>
 
-              <form class="text-left clearfix" action="index.php?c=login&a=form" method="POST">
-                  <div class="form-group">
-                    <input type="email" name="email" class="form-control"  placeholder="Email" required>
-                  </div>
+                        <br>
 
-                  <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Mật Khẩu" required>
-                  </div>
-
-                  <div class="text-center">
-                    <button type="submit" class="btn btn-main text-center" >Đăng Nhập</button>
-                  </div>
-              </form>
-
-              <p class="mt-20">Bạn là người mới ?<a href="index.php?c=account&a=signUp"> <b>Hãy Tạo Tài Khoản Mới</b></a></p>
-
-              <a class="mt-20" href="index.php?c=account&a=forgetPassword">Quên mật khẩu</a>
-
-              <br>
-                <!-- Đăng nhập bằng mạng xã hội -->
-
-                <!-- Google login -->
-                <?php
-                    //init configuration
-                    $clientID = GOOGLE_CLIENT_ID;
-                    $clientSecret = GOOGLE_CLIENT_SECRET;
-                    $redirectUri =  get_domain() . $_SERVER['PHP_SELF'] . "?c=auth&a=loginGoogle";
-                          
-                    // create Client Request to access Google API
-                    $client = new Google_Client();
-                    $client->setClientId($clientID);
-                    $client->setClientSecret($clientSecret);
-                    $client->setRedirectUri($redirectUri);
-                    $client->addScope("email");
-                    $client->addScope("profile");
-                    $loginUrl = $client->createAuthUrl();
-                ?>
-                <br>
-
-                <div class="text-center">
-                  <a class="btn btn-primary google-login" href="<?=$loginUrl?>"><i class="fab fa-google"></i> Đăng nhập bằng Google</a>
-
-
-                  <!-- Facebook login -->
-                  <?php
-                      $fb = new Facebook\Facebook([
-                        'app_id' => FACEBOOK_CLIENT_ID, // Replace {app-id} with your app id
-                        'app_secret' => FACEBOOK_CLIENT_SECRET,
-                        'default_graph_version' => 'v3.2',
-                        ]);
-                            
-                        $helper = $fb->getRedirectLoginHelper();
-
-                        $permissions = ['email']; // Optional permissions
-                        $callback = get_domain() . $_SERVER['PHP_SELF'] . "?c=auth&a=loginFacebook";
-                        $loginUrl = $helper->getLoginUrl($callback, $permissions);
-                                ;
-                  ?>
-
-                  <a class="btn btn-primary facebook-login" href="<?=$loginUrl?>"><i class="fab fa-facebook-f"></i> Đăng nhập bằng Facebook</a>
-              </div>
+                        <!-- Google login -->
+        
+                        <?php 
+                            //init configuration
+                            $clientID = GOOGLE_CLIENT_ID;
+                            $clientSecret = GOOGLE_CLIENT_SECRET;
+                            $redirectUri =  get_domain() . $_SERVER['PHP_SELF'] . "?c=auth&a=loginGoogle";
+                                    
+                            // create Client Request to access Google API
+                            $client = new Google_Client();
+                            $client->setClientId($clientID);
+                            $client->setClientSecret($clientSecret);
+                            $client->setRedirectUri($redirectUri);
+                            $client->addScope("email");
+                            $client->addScope("profile");
+                            $loginUrl = $client->createAuthUrl();
+                        ?>
+                        
+                        <br>
+        
+                        <div class="text-center">
+                            <a class="btn btn-primary google-login" href="<?=$loginUrl?>"><i class="fab fa-google"></i> Đăng nhập bằng Google</a>
+        
+                            <!-- Facebook login -->
+                            <?php
+                                $fb = new Facebook\Facebook([
+                                'app_id' => FACEBOOK_CLIENT_ID, // Replace {app-id} with your app id
+                                'app_secret' => FACEBOOK_CLIENT_SECRET,
+                                'default_graph_version' => 'v3.2',
+                                ]);
+                                    
+                                $helper = $fb->getRedirectLoginHelper();
+                                $permissions = ['email']; // Optional permissions
+                                $callback = get_domain() . $_SERVER['PHP_SELF'] . "?c=auth&a=loginFacebook";
+                                $loginUrl = $helper->getLoginUrl($callback, $permissions);
+                            ?>
+        
+                            <a class="btn btn-primary facebook-login" href="<?=$loginUrl?>"><i class="fab fa-facebook-f"></i> Đăng nhập bằng Facebook</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!--
@@ -145,8 +137,5 @@
 
     <!-- Main Js File -->
     <script src="public/js/script.js"></script>
-
-
-
-  </body>
-  </html>
+</body>
+</html>
