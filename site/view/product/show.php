@@ -159,12 +159,18 @@
 									<li>
 										<a href="index.php?c=product&a=show&id=<?=$relatedProduct->getId()?>"><i class="tf-ion-ios-search"></i></a>
 									</li>
-									
-									<li>
-										<a href="#!"><i class="tf-ion-android-cart"></i></a>
-									</li>
+
+									<?php if ($relatedProduct->getTotalQty() > 0): ?>
+										<li>
+											<a product-id="<?=$relatedProduct->getId()?>" <?=$relatedProduct->getCategory()->getId() == 1 || $relatedProduct->getCategory()->getId() == 4 ? 'size="S"' : 'size=""'?> class="buy"><i class="tf-ion-android-cart"></i></a>
+										</li>
+									<?php else: ?>
+										<li>
+											<a href="javascript:void(0)" class="out-of-stock" title="Hết Hàng"><i class="tf-ion-android-cart"></i></a>
+										</li>
+									<?php endif ?>
 								</ul>
-							</div>
+                        	</div>
 						</div>
 						<div class="product-content">
 							<h4><a href="index.php?c=product&a=show&id=<?=$relatedProduct->getId()?>"><?=$relatedProduct->getName()?></a></h4>

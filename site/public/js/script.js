@@ -308,17 +308,17 @@ function displayCartDetail(data) {
       var item = items[i];
       var row = 
               '<tr class="">'+
+                  '<td><img width="80" src="../upload/'+ item.img +'" title="'+ item.name +'"/></td>'+
                   '<td class="">'+
-                      '<div class="product-info">'+
-                          '<img width="80" src="../upload/'+ item.img +'" alt="'+ item.name +'" />'+
-                          '<a href="index.php?c=product&a=show&id='+ item.product_id +'">'+ item.name +'</a>'+
-                      '</div>'+
+                    '<div class="product-info">'+
+                      '<a href="index.php?c=product&a=show&id='+ item.product_id +'">'+ item.name +'</a>'+
+                    '</div>'+
                   '</td>'+
                   '<td>'+ item.size +'</td>'+
                   '<td class="">'+ numberFormat.format(item.unit_price) +'</td>'+
                   '<td><input type="number" value="'+ item.qty +'" onchange="updateProductInCart(this, '+ item.product_id +', `'+ item.size +'`)"></td>'+
                   '<td class="">'+
-                        '<a class="product-remove" href="javascript:void(0)" onclick="deleteProductInCart('+ item.product_id +', `'+ item.size +'`)">Xóa</a>'+
+                  '<a class="product-remove" href="javascript:void(0)" onclick="deleteProductInCart('+ item.product_id +', `'+ item.size +'`)">Xóa</a>'+
                   '</td>'+
               '</tr>';
       rows += row;
