@@ -10,7 +10,7 @@
                     <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Đồng hành cùng đẳng <br>
                         cấp thời trang.</h1>
                     <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn"
-                        href="shop.html">Mua Ngay</a>
+                        href="index.php?c=product">Mua Ngay</a>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
                     <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Đồng hành cùng đẳng <br>
                         cấp thời trang.</h1>
                     <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn"
-                        href="shop.html">Mua Ngay</a>
+                        href="index.php?c=product">Mua Ngay</a>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
                     <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Đồng hành cùng đẳng <br>
                         cấp thời trang.</h1>
                     <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn"
-                        href="shop.html">Mua Ngay</a>
+                        href="index.php?c=product">Mua Ngay</a>
                 </div>
             </div>
         </div>
