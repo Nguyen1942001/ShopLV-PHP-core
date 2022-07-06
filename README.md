@@ -1,5 +1,5 @@
 Dự án cá nhân làm website kinh doanh thời trang
-Mô tả: có đầy đủ các tính năng của một trang thương mại điện tử
+Mô tả: có đầy đủ các tính năng của một trang thương mại điện tử a
 Phần admin: 
   - Tài khoản admin (có mọi quyền): 
     + Username: khoinguyen
