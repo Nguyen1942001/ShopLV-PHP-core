@@ -19,7 +19,7 @@
   
 - Các chức năng - phía admin
   + Link truy cập vào admin: https://nguyen19042001.cf/admin
-  + Phân quyền thành 2 loại: Admin và nhân viên
-    . Admin: Có mọi quyền
-    . Nhân viên: Được quyền xem, thêm các sản phẩm mới. Các quyền khác sẽ bị chặn lại
+  + Phân quyền thành 2 loại: Admin và nhân viên <br>
+    . Admin: Có mọi quyền <br>
+    . Nhân viên: Được quyền xem, thêm các sản phẩm mới. Các quyền khác sẽ bị chặn lại <br>
    + Các chức năng chính: Quản lý danh mục, sản phẩm, đơn hàng, khách hàng, nhân viên, các reviews, phân quyền
