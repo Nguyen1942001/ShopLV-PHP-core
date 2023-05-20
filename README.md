@@ -23,3 +23,5 @@
     . Admin: Có mọi quyền <br>
     . Nhân viên: Được quyền xem, thêm các sản phẩm mới. Các quyền khác sẽ bị chặn lại <br>
    + Các chức năng chính: Quản lý danh mục, sản phẩm, đơn hàng, khách hàng, nhân viên, các reviews, phân quyền
+   + Tài khoản admin: khoinguyen - 123456
+   + Tài khoản nhân viên: nhanvien - 123456
