@@ -1,5 +1,5 @@
 - Dự án cá nhân: Xây dựng website kinh doanh thời trang
-- Website: https://nguyen19042001.cf
+- Website: https://nguyen19042001.cf (expired)
 - Công nghệ sử dụng:
   + Frontend: HTML, CSS, JS (Jquery, Ajax), Bootstrap (Responsive)
   + Backend: PHP thuần
@@ -18,7 +18,7 @@
   + Liên hệ với chủ website: Có thể gửi khiếu nại thông qua phần "Liên Hệ"
   
 - Các chức năng - phía admin
-  + Link truy cập vào admin: https://nguyen19042001.cf/admin
+  + Link truy cập vào admin: https://nguyen19042001.cf/admin (expired)
   + Phân quyền thành 2 loại: Admin và nhân viên <br>
     . Admin: Có mọi quyền <br>
     . Nhân viên: Được quyền xem, thêm các sản phẩm mới. Các quyền khác sẽ bị chặn lại <br>
